@@ -15,14 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('form', { delay: 600 });
 
     // Animación suave para la navegación
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+    
+            // Obtener el valor de href
+            const target = this.getAttribute('href');
+    
+            // Verificar si el href no es "#" antes de hacer scrollIntoView
+            if (target !== '#') {
+                const element = document.querySelector(target);
+                if (element) {
+                    element.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
         });
     });
+    
 
     // Efecto de escritura para el título principal
     const titulo = document.querySelector('h1');
@@ -139,3 +150,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
