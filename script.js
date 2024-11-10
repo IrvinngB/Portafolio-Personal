@@ -17,22 +17,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Animación suave para la navegación
     document.querySelectorAll('a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
-    
-            // Obtener el valor de href
             const target = this.getAttribute('href');
     
-            // Verificar si el href no es "#" antes de hacer scrollIntoView
-            if (target !== '#') {
-                const element = document.querySelector(target);
-                if (element) {
-                    element.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+            // Verifica si el href es un enlace interno (comienza con "#")
+            if (target.startsWith('#')) {
+                e.preventDefault(); // Prevenir el comportamiento predeterminado solo para enlaces internos
+                
+                if (target !== '#') {
+                    const element = document.querySelector(target);
+                    if (element) {
+                        element.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             }
         });
     });
+    
     
 
     // Efecto de escritura para el título principal

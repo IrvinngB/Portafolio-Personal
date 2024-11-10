@@ -277,13 +277,32 @@ footer {
 /* Media Queries para móviles */
 
 @media (max-width: 768px) {
-    nav ul {
+    nav ul li {
         display: none;
     }
 
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 1rem;
+    /* Mostrar solo el <li> que contiene el enlace de cambio de idioma */
+    #languageSwitcherContainer {
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+
+    header {
+        position: static; /* Elimina la posición fija en móviles */
+    }
+
+    /* Estilos para el enlace de cambio de idioma */
+    #languageSwitcher {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        margin: 10px 0;
+        display: inline-block;
+    }
+
+    #languageSwitcher:hover {
+        color: var(--color-accent); /* Cambia a cualquier color que prefieras */
     }
 
     h1 {
