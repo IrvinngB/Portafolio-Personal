@@ -154,3 +154,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".cd-slider .item");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    let currentIndex = 0;
+
+    // Función para actualizar las diapositivas
+    const updateSlides = () => {
+      slides.forEach((slide, index) => {
+        slide.classList.remove("current", "prev_slide");
+        if (index === currentIndex) {
+          slide.classList.add("current");
+        } else if (index < currentIndex) {
+          slide.classList.add("prev_slide");
+        }
+      });
+    };
+
+    // Evento para el botón "next"
+    nextButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      currentIndex = (currentIndex + 1) % slides.length; // Avanza al siguiente índice, vuelve al inicio si es el último
+      updateSlides();
+    });
+
+    // Evento para el botón "prev"
+    prevButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Retrocede, vuelve al final si es el primero
+      updateSlides();
+    });
+
+    // Inicializa las diapositivas
+    updateSlides();
+  });

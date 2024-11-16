@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irvin</title>
+    <meta name="description" content="Irvin Benitez - Backend Software Developer Portfolio">
+    <title>Irvin Benitez - Backend Software Developer</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <link rel="shortcut icon" href="code-solid.svg" type="image/x-icon">
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <link rel="icon" href="code-solid.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="#inicio">Home</a></li>
                 <li><a href="#sobre-mi">About Me</a></li>
                 <li><a href="#tecnologias">Technologies</a></li>
                 <li><a href="#proyectos">Projects</a></li>
                 <li><a href="#contacto">Contact</a></li>
-                <li id="languageSwitcherContainer"><a href="#" id="languageSwitcher">Language Switcher</a></li>
+                <li id="languageSwitcherContainer"><button id="languageSwitcher" aria-label="Switch language">Language Switcher</button></li>
             </ul>
         </nav>
     </header>
@@ -27,8 +28,8 @@
         <section id="inicio">
             <h1>Irvin Benitez</h1>
             <p>Backend Software Developer</p>
-            <a href="#sobre-mi" class="scroll-down">
-                <i class="fas fa-chevron-down"></i>
+            <a href="#sobre-mi" class="scroll-down" aria-label="Scroll to About Me section">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </a>
         </section>
 
@@ -41,76 +42,103 @@
             <h2>Technologies</h2>
             <div class="tech-grid">
                 <div class="tech-item">
-                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-html5" aria-hidden="true"></i>
                     <span>HTML</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
                     <span>CSS</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fab fa-js"></i>
+                    <i class="fab fa-js" aria-hidden="true"></i>
                     <span>JavaScript</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-brands fa-python" aria-hidden="true"></i>
                     <span>Python</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fab fa-node"></i>
+                    <i class="fab fa-node" aria-hidden="true"></i>
                     <span>Node.js</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fas fa-database"></i>
+                    <i class="fas fa-database" aria-hidden="true"></i>
                     <span>SQL</span>
                 </div>
             </div>
         </section>
 
         <section id="proyectos">
-            <h2>My Projects</h2>
-            <div class="proyecto">
-                <h3>WhatsApp Chat Bot</h3>
-                <p>I developed a custom WhatsApp bot with the ability to provide intelligent responses using the Gemini AI API.</p>
-                <a class="Link-Color" href="https://github.com/IrvinngB/Bot-WhatsApp" target="_blank">View here</a>
-            </div>
-            <div class="proyecto">
-                <h3>Registration Form</h3>
-                <p>I developed a payroll management form using a local database for data entry, updating, deletion, and querying.</p>
-                <a class="Link-Color" href="https://github.com/IrvinngB/DS-Project1" target="_blank">View here</a>
-            </div>
-            <div class="proyecto">
-                <h3>Landing Webpage</h3>
-                <p>I worked on the creation of a simple landing webpage.</p>
-                <a class="Link-Color" href="https://irvinngb.github.io/Pagina-Aterrizaje/" target="_blank">View here</a>
-            </div>
-            <div class="proyecto">
-                <h3>E-Commerce</h3>
-                <p>I worked on the creation of an E-Commerce.</p>
-                <a class="Link-Color" href="https://proyecto-ds-5.vercel.app/" target="_blank">View here</a>
+            <h2>Projects</h2>
+            <div class="cd-slider" aria-label="Project Slider">
+                <ul>
+                    <li class="item current">
+                        <div class="card">
+                            <div class="info">
+                                <h3>WhatsApp Chat Bot</h3>
+                                <p>I developed a custom WhatsApp bot with the ability to provide intelligent responses using the Gemini AI API.</p>
+                                <a href="https://github.com/IrvinngB/Bot-WhatsApp" target="_blank" rel="noopener noreferrer">View project</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="card">
+                            <div class="info">
+                                <h3>Registration Form</h3>
+                                <p>I developed a payroll management form using a local database for data entry, updating, deletion, and querying.</p>
+                                <a href="https://github.com/IrvinngB/DS-Project1" target="_blank" rel="noopener noreferrer">View project</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="card">
+                            <div class="info">
+                                <h3>Landing Webpage</h3>
+                                <p>I worked on the creation of a simple landing webpage.</p>
+                                <a href="https://irvinngb.github.io/Pagina-Aterrizaje/" target="_blank" rel="noopener noreferrer">View project</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="card">
+                            <div class="info">
+                                <h3>E-Commerce</h3>
+                                <p>I worked on the creation of an E-Commerce.</p>
+                                <a href="https://proyecto-ds-5.vercel.app/" target="_blank" rel="noopener noreferrer">View project</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <nav aria-label="Project navigation">
+                    <button class="prev" aria-label="Previous project">
+                        <i class="fas fa-chevron-left fa-2x" aria-hidden="true"></i>
+                    </button>
+                    <button class="next" aria-label="Next project">
+                        <i class="fas fa-chevron-right fa-2x" aria-hidden="true"></i>
+                    </button>
+                </nav>
             </div>
         </section>
-        
 
         <section id="contacto">
             <h2>Contact</h2>
             <div class="contact-grid">
                 <div class="contact-item">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                     <div class="contact-info">
-                        <p><a href="https://www.linkedin.com/in/irvin-benitez-11313231b/" target="_blank">Irvin Benitez</a></p>
+                        <a href="https://www.linkedin.com/in/irvin-benitez-11313231b/" target="_blank" rel="noopener noreferrer">Irvin Benitez on LinkedIn</a>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                     <div class="contact-info">
-                        <p><a href="https://github.com/IrvinngB" target="_blank">Irvin Benitez</a></p>
+                        <a href="https://github.com/IrvinngB" target="_blank" rel="noopener noreferrer">Irvin Benitez on GitHub</a>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                     <div class="contact-info">
-                        <p><a href="mailto:Irvin.Benitezs.26@gmail.com">Irvin.Benitezs.26@gmail.com</a></p>
+                        <a href="mailto:Irvin.Benitezs.26@gmail.com">Irvin.Benitezs.26@gmail.com</a>
                     </div>
                 </div>
             </div>
@@ -121,11 +149,8 @@
         <p>&copy; 2024 Irvin Benitez. All rights reserved.</p>
     </footer>
 
-    <div class="navigation-guide"></div>
-    <script src="language.js"></script>
-    <script src="script.js"></script>
-    
+    <div class="navigation-guide" aria-hidden="true"></div>
+    <script src="language.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
-
-<script></script>
