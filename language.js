@@ -1,5 +1,3 @@
-// Archivo language.js
-
 // Objeto de traducciones
 const translations = {
     en: {
@@ -16,7 +14,7 @@ const translations = {
         myProjects: "My Projects",
         whatsappBot: "WhatsApp Chat Bot",
         whatsappBotDescription: "I developed a custom WhatsApp bot with the ability to provide intelligent responses using the Gemini AI API.",
-        viewHere: "View here",
+        viewHere: "View project",
         registrationForm: "Registration Form",
         registrationFormDescription: "I developed a payroll management form using a local database for data entry, updating, deletion, and querying.",
         landingWebpage: "Landing Webpage",
@@ -43,7 +41,7 @@ const translations = {
         myProjects: "Mis Proyectos",
         whatsappBot: "Bot de WhatsApp",
         whatsappBotDescription: "Desarrollé un bot personalizado de WhatsApp con la capacidad de proporcionar respuestas inteligentes utilizando la API de Gemini AI.",
-        viewHere: "Ver aquí",
+        viewHere: "Ver proyecto",
         registrationForm: "Formulario de Registro",
         registrationFormDescription: "Desarrollé un formulario de gestión de nómina utilizando una base de datos local para la entrada, actualización, eliminación y consulta de datos.",
         landingWebpage: "Página de Aterrizaje",
@@ -82,9 +80,9 @@ function translate(language) {
     // Sección Proyectos
     document.querySelector('#proyectos h2').textContent = translations[language].myProjects;
 
-    const projectTitles = document.querySelectorAll('#proyectos .proyecto h3');
-    const projectDescriptions = document.querySelectorAll('#proyectos .proyecto p');
-    const projectLinks = document.querySelectorAll('#proyectos .proyecto a');
+    const projectTitles = document.querySelectorAll('#proyectos .cd-slider .item .card .info h3');
+    const projectDescriptions = document.querySelectorAll('#proyectos .cd-slider .item .card .info p');
+    const projectLinks = document.querySelectorAll('#proyectos .cd-slider .item .card .info a');
 
     projectTitles[0].textContent = translations[language].whatsappBot;
     projectDescriptions[0].textContent = translations[language].whatsappBotDescription;
@@ -104,15 +102,16 @@ function translate(language) {
 
     // Sección Contacto
     document.querySelector('#contacto h2').textContent = translations[language].contactTitle;
-    document.querySelectorAll('#contacto .contact-item .contact-info p a')[0].textContent = translations[language].linkedin;
-    document.querySelectorAll('#contacto .contact-item .contact-info p a')[1].textContent = translations[language].github;
-    document.querySelectorAll('#contacto .contact-item .contact-info p a')[2].textContent = translations[language].email;
+    const contactLinks = document.querySelectorAll('#contacto .contact-info a');
+    contactLinks[0].textContent = translations[language].linkedin;
+    contactLinks[1].textContent = translations[language].github;
+    contactLinks[2].textContent = translations[language].email;
 
     // Footer
     document.querySelector('footer p').innerHTML = translations[language].allRightsReserved;
 }
 
-
+// Inicialización
 let currentLanguage = 'en';
 
 document.getElementById('languageSwitcher').addEventListener('click', function (e) {
@@ -121,4 +120,3 @@ document.getElementById('languageSwitcher').addEventListener('click', function (
     translate(currentLanguage);
     console.log('Language switched to:', currentLanguage);
 });
-
