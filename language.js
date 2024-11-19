@@ -24,6 +24,8 @@ const translations = {
         logoDesignDescription: "I designed a professional logo for a small enterprise using Adobe Illustrator, ensuring high-quality visuals and brand consistency.",
         bannerDesign: "Banner Design",
         bannerDesignDescription: "I designed a professional banner for a small enterprise using Adobe Photoshop, ensuring high-quality visuals and brand consistency.",
+        advertisingSpot: "Advertising Spot",
+        advertisingSpotDescription: "I created a short but concise advertising spot, ensuring clear and effective communication of the brand's message.",
         viewProject: "View project",
         contactTitle: "Contact",
         linkedin: "LinkedIn",
@@ -55,6 +57,8 @@ const translations = {
         logoDesignDescription: "Diseñé un logotipo profesional para una pequeña empresa utilizando Adobe Illustrator, asegurando alta calidad visual y coherencia de marca.",
         bannerDesign: "Diseño de Banner",
         bannerDesignDescription: "Diseñé un banner profesional para una pequeña empresa utilizando Adobe Photoshop, asegurando alta calidad visual y coherencia de marca.",
+        advertisingSpot: "Spot Publicitario",
+        advertisingSpotDescription: "Creé un spot publicitario corto pero conciso, asegurando una comunicación clara y efectiva del mensaje de la marca.",
         viewProject: "Ver proyecto",
         contactTitle: "Contacto",
         linkedin: "LinkedIn",
@@ -115,6 +119,10 @@ function translate(language) {
     projectTitles[5].textContent = translations[language].bannerDesign;
     projectDescriptions[5].textContent = translations[language].bannerDesignDescription;
     projectLinks[5].textContent = translations[language].viewProject;
+
+    projectTitles[6].textContent = translations[language].advertisingSpot;
+    projectDescriptions[6].textContent = translations[language].advertisingSpotDescription;
+    projectLinks[6].textContent = translations[language].viewProject;
 
     // Sección Contacto
     document.querySelector('#contacto h2').textContent = translations[language].contactTitle;
