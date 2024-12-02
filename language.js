@@ -26,6 +26,8 @@ const translations = {
         bannerDesignDescription: "I designed a professional banner for a small enterprise using Adobe Photoshop, ensuring high-quality visuals and brand consistency.",
         advertisingSpot: "Advertising Spot",
         advertisingSpotDescription: "I created a short but concise advertising spot, ensuring clear and effective communication of the brand's message.",
+        statisticsProject: "Statistics Project",
+        statisticsProjectDescription: "Developed a comprehensive web page for statistical analysis using Jupyter Notebook, Python, HTML, and CSS. This project enhances data visualization and provides insightful analysis.",
         viewProject: "View project",
         contactTitle: "Contact",
         linkedin: "LinkedIn",
@@ -59,6 +61,8 @@ const translations = {
         bannerDesignDescription: "Diseñé un banner profesional para una pequeña empresa utilizando Adobe Photoshop, asegurando alta calidad visual y coherencia de marca.",
         advertisingSpot: "Spot Publicitario",
         advertisingSpotDescription: "Creé un spot publicitario corto pero conciso, asegurando una comunicación clara y efectiva del mensaje de la marca.",
+        statisticsProject: "Proyecto de Estadísticas",
+        statisticsProjectDescription: "Desarrollé una página web integral para el análisis estadístico utilizando Jupyter Notebook, Python, HTML y CSS. Este proyecto mejora la visualización de datos y proporciona un análisis perspicaz.",
         viewProject: "Ver proyecto",
         contactTitle: "Contacto",
         linkedin: "LinkedIn",
@@ -123,6 +127,10 @@ function translate(language) {
     projectTitles[6].textContent = translations[language].advertisingSpot;
     projectDescriptions[6].textContent = translations[language].advertisingSpotDescription;
     projectLinks[6].textContent = translations[language].viewProject;
+
+    projectTitles[7].textContent = translations[language].statisticsProject;
+    projectDescriptions[7].textContent = translations[language].statisticsProjectDescription;
+    projectLinks[7].textContent = translations[language].viewProject;
 
     // Sección Contacto
     document.querySelector('#contacto h2').textContent = translations[language].contactTitle;
